@@ -26,3 +26,28 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+# Name
+babanow
+
+## Description
+You can view products(mainly food) posted by shopkeeper. This web application wil contribute to local economy by increasing the sales in the Takadanobaba street.
+
+### Table
++ babanow
++ user
+
+### Association
++ babanow belongs to user
++ user has many babanow
+
+### Culumns
+#### babanow
+|id     |title|concept|user_id|
+|-------|-----|-------|-------|
+|integer|text |text   |integer|
+
+#### user
+|id     |name  |email|password|
+|-------|------|-----|--------|
+|integer|string|text |text    |
