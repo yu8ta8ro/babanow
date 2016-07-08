@@ -20,8 +20,12 @@
 					<li><a href="#intro">Intro</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#team">Team</a></li>
-					<li><a href="#pricing">Pricing</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li>
+					 <% if user_signed_in? %>
+					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Out</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">投稿する</a></li>
+					<% else %>
+					<li><a href="/users/sign_up" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a>
+					<% end %>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -48,17 +52,17 @@
 				<h2>君が好きなもの</h2>
 			</div>
 			<div class="row services">
-			<% @babas.each do |baba|%>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="heart-blue.png" alt="" class="icon">
+				<% @babas.each do |baba|%>
+					<div class="col-md-4">
+						<div class="service">
+							<div class="icon-holder">
+								<img src="heart-blue.png" alt="" class="icon">
+							</div>
+							<h4 class="heading">店名</h4>
+							<p class="description"><%= baba.title %></p>
 						</div>
-						<h4 class="heading">店名</h4>
-						<p class="description"><%= baba.title %></p>
 					</div>
-				</div>
-			<% end %>
+				<% end %>
 			</div>
 		</div>
 		<div class="cut cut-bottom"></div>
