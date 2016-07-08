@@ -4,6 +4,9 @@ class BabasController < ApplicationController
 
   def index
     @babas = Baba.order('id DESC').page(params[:page]).per(6)
+    phrase = ["#ばばなう","#たかだのばば","#ばば歩き"]
+    random = rand(3)
+    @keyword = phrase[random]
   end
 
   def new
