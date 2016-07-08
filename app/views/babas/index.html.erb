@@ -48,33 +48,17 @@
 				<h2>君が好きなもの</h2>
 			</div>
 			<div class="row services">
+			<% @babas.each do |baba|%>
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
 							<img src="heart-blue.png" alt="" class="icon">
 						</div>
-						<h4 class="heading">Cardio Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+						<h4 class="heading">店名</h4>
+						<p class="description"><%= baba.title %></p>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="guru-blue.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Yoga Pilates</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="weight-blue.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Power Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-					</div>
-				</div>
+			<% end %>
 			</div>
 		</div>
 		<div class="cut cut-bottom"></div>
