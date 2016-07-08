@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
- resources :babanows
- root 'babanows#index'
+ resources :babas
+ root 'babas#index'
 end

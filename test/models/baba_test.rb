@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BabanowsControllerTest < ActionController::TestCase
+class BabaTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
