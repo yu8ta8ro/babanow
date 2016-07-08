@@ -14,7 +14,7 @@ class BabasController < ApplicationController
   end
 
   def create
-    Baba.create(create_params)
+    Baba.create(title: create_params[:title], concept: create_params[:concept], user_id: current_user.id)
     redirect_to action: :index
   end
 
