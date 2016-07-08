@@ -21,10 +21,10 @@
 					<li><a href="#services">Services</a></li>
 					<li><a href="#team">Team</a></li>
 					 <% if user_signed_in? %>
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Out</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">投稿する</a></li>
+					 <li><%= link_to 'Sign Out',destroy_user_session_path, method: :delete, class:"btn btn-blue"%></li>
+					<li><a href="/babas/new" class="btn btn-blue">投稿する</a></li>
 					<% else %>
-					<li><a href="/users/sign_up" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a>
+					<li><a href="/users/sign_up" class="btn btn-blue">Sign Up</a>
 					<% end %>
 				</ul>
 			</div>
