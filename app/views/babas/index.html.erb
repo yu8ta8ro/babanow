@@ -58,8 +58,8 @@
 							<div class="icon-holder">
 								<img src="heart-blue.png" alt="" class="icon">
 							</div>
-							<h4 class="heading">店名</h4>
-							<p class="description"><%= baba.title %></p>
+							<h4 class="heading"><%= baba.user.name %></h4>
+							<p class="description"><%= link_to "#{baba.title}[Click!]", baba_path(baba.id), method: :get %></p>
 						</div>
 					</div>
 				<% end %>

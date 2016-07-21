@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
   resources :babas
+  devise_for :users
   root 'babas#index'
 end

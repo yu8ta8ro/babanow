@@ -1,6 +1,6 @@
 class BabasController < ApplicationController
 
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @babas = Baba.order('id DESC').page(params[:page]).per(6)
