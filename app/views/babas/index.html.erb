@@ -56,7 +56,9 @@
 					<div class="col-md-4">
 						<div class="service">
 							<div class="icon-holder">
-								<img src="heart-blue.png" alt="" class="icon">
+								<% if baba.image? %>
+							     <%= image_tag baba.image.url %>
+							  <% end %>
 							</div>
 							<h4 class="heading"><%= baba.user.name %></h4>
 							<p class="description"><%= link_to "#{baba.title}[Click!]", baba_path(baba.id), method: :get %></p>

@@ -1,6 +1,12 @@
 
 <div class="sample3">
-  <%= image_tag '' %>
+  <p>
+  <% if @baba.image? %>
+    <div class="thumbnail">
+      <%= image_tag @baba.image.url %>
+    </div>
+  <% end %>
+  </p>
   <div class="mask">
   <div class="caption"><%= @baba.title %></div>
   </div>

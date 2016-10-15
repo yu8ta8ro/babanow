@@ -14,7 +14,7 @@ class BabasController < ApplicationController
   end
 
   def create
-    Baba.create(title: create_params[:title], concept: create_params[:concept], user_id: current_user.id)
+    Baba.create(title: create_params[:title], concept: create_params[:concept], user_id: current_user.id, image: create_params[:image])
     redirect_to action: :index
   end
 
@@ -24,7 +24,7 @@ class BabasController < ApplicationController
 
   private
   def create_params
-    params.require(:baba).permit(:title, :concept)
+    params.require(:baba).permit(:title, :concept, :image, :image_cache)
   end
 
   def move_to_index
