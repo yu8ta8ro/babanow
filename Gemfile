@@ -51,3 +51,5 @@ gem 'sprockets', '2.11.0'
 gem 'kaminari'
 gem 'devise', '4.1.0'
 gem 'carrierwave'
+gem 'rmagick'
+

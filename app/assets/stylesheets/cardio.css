@@ -465,7 +465,7 @@ section {
 
 .service .icon-holder {
 	position: relative;
-	top: 100px;
+	top: 20px;
 	display: inline-block;
 	margin-bottom: 40px;
 	padding: 10px;
@@ -476,7 +476,7 @@ section {
 
 .service .heading {
 	position: relative;
-	top: 80px;
+	top: 20px;
 	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
